@@ -1,0 +1,18 @@
+{
+	"name": "szimfonia-dice-roller",
+	"title": "Szimfonia Dice Roller",
+	"description": "Adds the ability to roll a Szimfonia die",
+	"version": "1.0.0",
+	"minimumCoreVersion" : "0.7.2",
+	"compatibleCoreVersion" : "0.7.2",
+	"author": "JDW, Jonny",
+	"esmodules": [
+		"./modules/szimfonia.js"
+	],
+	"styles": [
+		"./css/szimfonia.css"
+	],
+	"url": "https://github.com/JiDW/FVTT-Szimfonia",
+	"manifest": "",
+	"download": ""
+}
