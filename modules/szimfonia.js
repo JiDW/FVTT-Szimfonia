@@ -58,12 +58,12 @@ Hooks.once('diceSoNiceReady', (dice3d) => {
         'modules/szimfonia-dice-roller/images/D1_bg.png'
       ],
       bumpMaps:[
-        'modules/szimfonia-dice-roller/images/D1_bg_bump.png', 
+        'modules/szimfonia-dice-roller/images/D1_bump.png', 
         'modules/szimfonia-dice-roller/images/F2_bump.png', 
         'modules/szimfonia-dice-roller/images/S1_bump.png', 
         'modules/szimfonia-dice-roller/images/S2_bump.png', 
         'modules/szimfonia-dice-roller/images/F1_bump.png', 
-        'modules/szimfonia-dice-roller/images/D1_bg_bump.png'
+        'modules/szimfonia-dice-roller/images/D1_bump.png'
       ],
       system:"szimfonia"
     });

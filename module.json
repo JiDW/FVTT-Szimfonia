@@ -13,6 +13,6 @@
 		"./css/szimfonia.css"
 	],
 	"url": "https://github.com/JiDW/FVTT-Szimfonia",
-	"manifest": "",
-	"download": ""
+	"manifest": "https://raw.githubusercontent.com/JiDW/FVTT-Szimfonia/master/module.json",
+	"download": "https://raw.githubusercontent.com/JiDW/FVTT-Szimfonia/master/fvtt-szimfonia.zip"
 }
