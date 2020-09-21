@@ -40,7 +40,9 @@ Hooks.on('diceSoNiceRollComplete', (chatMessageID) => {
     
     if(szRoll){
         ChatMessage.create({
-            content: `<b>Defense:</b> ${defense}<br><b>Success:</b> ${success}<br><b>Focus:</b> ${focus}`
+            content: `<b>Defense:</b> ${defense}<br><b>Success:</b> ${success}<br><b>Focus:</b> ${focus}`,
+            whisper: message.data.whisper,
+            blind: message.data.blind
         });
     }
 });
