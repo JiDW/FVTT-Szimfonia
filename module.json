@@ -2,9 +2,9 @@
 	"name": "szimfonia-dice-roller",
 	"title": "Szimfonia Dice Roller",
 	"description": "Adds the ability to roll a Szimfonia die",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"minimumCoreVersion" : "0.7.2",
-	"compatibleCoreVersion" : "0.7.2",
+	"compatibleCoreVersion" : "0.7.3",
 	"author": "JDW, Jonny",
 	"esmodules": [
 		"./modules/szimfonia.js"

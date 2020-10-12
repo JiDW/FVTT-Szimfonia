@@ -1,7 +1,7 @@
 export class DieSzimfonia extends Die {
-    constructor(termData) {
+    constructor() {
+        let termData = {faces:6};
         super(termData);
-        this.faces = 6;
     }
 
     /* -------------------------------------------- */
