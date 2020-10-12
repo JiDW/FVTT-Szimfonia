@@ -1,6 +1,6 @@
 export class DieSzimfonia extends Die {
-    constructor() {
-        let termData = {faces:6};
+    constructor(termData) {
+        termData.faces=6;
         super(termData);
     }
 
