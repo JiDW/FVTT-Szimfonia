@@ -16,19 +16,19 @@ Hooks.on('diceSoNiceRollComplete', (chatMessageID) => {
                 szRoll = true;
                 dice.results.forEach(res => {
                     switch(res.result){
-                        case 1:
+                        case 5:
                             defense++;
                             break;
-                        case 2:
+                        case 4:
                             focus+=2;
                             break;
-                        case 3:
+                        case 1:
                             success++;
                             break;
-                        case 4:
+                        case 2:
                             success+=2;
                             break;
-                        case 5:
+                        case 3:
                             focus++;
                             break;
                         case 6:
@@ -54,20 +54,20 @@ Hooks.once('diceSoNiceReady', (dice3d) => {
     dice3d.addDicePreset({
       type:"ds",
       labels:[
-        'modules/szimfonia-dice-roller/images/D1_bg.png', 
-        'modules/szimfonia-dice-roller/images/F2.png', 
         'modules/szimfonia-dice-roller/images/S1.png', 
         'modules/szimfonia-dice-roller/images/S2.png', 
-        'modules/szimfonia-dice-roller/images/F1.png', 
+        'modules/szimfonia-dice-roller/images/F1.png',
+		'modules/szimfonia-dice-roller/images/F2.png', 
+        'modules/szimfonia-dice-roller/images/D1_bg.png', 		
         'modules/szimfonia-dice-roller/images/D1_bg.png'
       ],
       bumpMaps:[
-        'modules/szimfonia-dice-roller/images/D1_bump.png', 
-        'modules/szimfonia-dice-roller/images/F2_bump.png', 
         'modules/szimfonia-dice-roller/images/S1_bump.png', 
         'modules/szimfonia-dice-roller/images/S2_bump.png', 
-        'modules/szimfonia-dice-roller/images/F1_bump.png', 
-        'modules/szimfonia-dice-roller/images/D1_bump.png'
+        'modules/szimfonia-dice-roller/images/F1_bump.png',
+        'modules/szimfonia-dice-roller/images/F2_bump.png',		
+        'modules/szimfonia-dice-roller/images/D1_bump.png',
+		'modules/szimfonia-dice-roller/images/D1_bump.png'
       ],
       system:"szimfonia"
     });
