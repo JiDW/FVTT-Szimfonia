@@ -17,7 +17,7 @@ export class DieSzimfonia extends Die {
     /* -------------------------------------------- */
 
     /** @override */
-    static getResultLabel(result) {
+    getResultLabel(result) {
         return {
             "1": '<img src="modules/szimfonia-dice-roller/images/D1_inCHAT.png" />',
             "2": '<img src="modules/szimfonia-dice-roller/images/F2_inCHAT.png" />',
@@ -25,6 +25,6 @@ export class DieSzimfonia extends Die {
             "4" : '<img src="modules/szimfonia-dice-roller/images/S2_inCHAT.png" />',
             "5": '<img src="modules/szimfonia-dice-roller/images/F1_inCHAT.png" />',
             "6": '<img src="modules/szimfonia-dice-roller/images/D1_inCHAT.png" />'
-        }[result];
+        }[result.result];
     }
 }
