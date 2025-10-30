@@ -1,3 +1,4 @@
+import {DiceSystem} from '../../dice-so-nice/api.js';
 import {DieSzimfonia} from './die.js';
 
 Hooks.once("init", async function () {
@@ -11,46 +12,49 @@ Hooks.on('diceSoNiceRollComplete', (chatMessageID) => {
         let focus = 0;
         let success = 0;
         let szRoll = false;
-        message.roll.dice.forEach(dice => {
-            if(dice instanceof DieSzimfonia){
-                szRoll = true;
-                dice.results.forEach(res => {
-                    switch(res.result){
-                        case 5:
-                            defense++;
-                            break;
-                        case 4:
-                            focus+=2;
-                            break;
-                        case 1:
-                            success++;
-                            break;
-                        case 2:
-                            success+=2;
-                            break;
-                        case 3:
-                            focus++;
-                            break;
-                        case 6:
-                            defense++;
-                            break;
-                    }
-                });
-            }
+        message.rolls.forEach(roll => {
+            roll.dice.forEach(dice => {
+                if(dice instanceof DieSzimfonia){
+                    szRoll = true;
+                    dice.results.forEach(res => {
+                        switch(res.result){
+                            case 5:
+                                defense++;
+                                break;
+                            case 4:
+                                focus+=2;
+                                break;
+                            case 1:
+                                success++;
+                                break;
+                            case 2:
+                                success+=2;
+                                break;
+                            case 3:
+                                focus++;
+                                break;
+                            case 6:
+                                defense++;
+                                break;
+                        }
+                    });
+                }
+            });
         });
         
         if(szRoll){
             ChatMessage.create({
                 content: `<b>Defense:</b> ${defense}<br><b>Success:</b> ${success}<br><b>Focus:</b> ${focus}`,
-                whisper: message.data.whisper,
-                blind: message.data.blind
+                author: message.author,
+                blind: message.blind
             });
         }
     }
 });
 
 Hooks.once('diceSoNiceReady', (dice3d) => {
-    dice3d.addSystem({id:"szimfonia",name:"Szimfonia"},true);
+    const system = new DiceSystem("szimfonia", "Szimfonia", "default");
+    dice3d.addSystem(system);
     dice3d.addDicePreset({
       type:"ds",
       labels:[
